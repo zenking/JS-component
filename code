@@ -1,1 +1,16 @@
 
+var jdb = (function  () {
+        
+        var Jdb = function  (str) {
+            
+        };
+        Jdb.prototype.alert = function  (str) {
+            alert(str);
+            return this;
+        };
+        Jdb.prototype.console = function  (str) {
+            console.log(str);
+            return this;
+        };
+        return new Jdb();
+    })()
