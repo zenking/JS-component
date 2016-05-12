@@ -1,4 +1,4 @@
-
+1
 var jdb = (function  () {
         
         var Jdb = function  (str) {
@@ -14,3 +14,21 @@ var jdb = (function  () {
         };
         return new Jdb();
     })()
+    调用直接 jdb.alert('调用alert')
+    2
+    var jdb = (function  () {
+        
+        var Jdb = function  (str) {
+            
+        };
+        Jdb.prototype.alert = function  (str) {
+            alert(str);
+            return this;
+        };
+        Jdb.prototype.console = function  (str) {
+            console.log(str);
+            return this;
+        };
+        return  Jdb;
+    })()
+    调用的时候需要先进行实例化  new jdb().alert('调用alert')
