@@ -1,7 +1,7 @@
-
 # JS 组件化开发 系列
 作为前端开发，组件化开发是你成长的必经之路。时间的积累逐渐摸索出自己比较好的开发方式。
 # (1)实现最简单的组件化；
+
     var jdb ={
     alert: function(str) {
         alert(str);
@@ -11,6 +11,7 @@
     }
     }
      这样就是简单的实现 jdb.alert、jdb.console 两个方法。
+     
    ###但是呢？
    现在需求改了，  需要实现链式调用. 就是像jquery    一样使用。
     这也是很好理解的。怎么实现链式调用呢 。就像调用       alert 或者console 这两个方法是jdb的属性和方法。
@@ -32,8 +33,9 @@
     接着问题又有了？
     如果要是现'先console'--'后alert'呢？
     也很简单,还是老方法   return this;  
-   ##至于this 的用法自己补,这里不做赘述。或者有需要专门讲一下this。
-     var jdb ={
+   ###至于this 的用法自己补,这里不做赘述。或者有需要专门讲一下this。
+
+      var jdb ={
        alert: function(str) {
          alert(str);
         return this;
